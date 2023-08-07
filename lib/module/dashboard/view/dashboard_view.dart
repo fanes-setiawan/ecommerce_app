@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/shared/widget/logo/appLogoSmall.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -9,7 +10,8 @@ class DashboardView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        leading: AppLogoSmall(),
+        title: const Text("My Ecommerce"),
         actions: const [
           Padding(
             padding: EdgeInsets.all(8.0),
@@ -42,11 +44,8 @@ class DashboardView extends StatefulWidget {
         ],
       ),
       body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
+        child: Column(
+          children: [],
         ),
       ),
     );
