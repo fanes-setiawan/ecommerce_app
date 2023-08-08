@@ -17,6 +17,8 @@ export 'package:hyper_ui/module/main_navigation/controller/main_navigation_contr
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
 export 'package:hyper_ui/module/order/controller/order_controller.dart';
 export 'package:hyper_ui/module/order/view/order_view.dart';
+export 'package:hyper_ui/module/product_details/controller/product_details_controller.dart';
+export 'package:hyper_ui/module/product_details/view/product_details_view.dart';
 export 'package:hyper_ui/module/product_list/controller/product_list_controller.dart';
 export 'package:hyper_ui/module/product_list/view/product_list_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
