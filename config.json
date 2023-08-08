@@ -2,7 +2,8 @@
     "modules": [
         "login",
         "product_list",
-        "product_details"
+        "product_details",
+        "category_list"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

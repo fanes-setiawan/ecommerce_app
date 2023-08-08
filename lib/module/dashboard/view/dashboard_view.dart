@@ -123,7 +123,7 @@ class DashboardView extends StatefulWidget {
                   H5(
                     title: "Category",
                     subtitle: "See all",
-                    onPressed: () => Get.to(ProductListView()),
+                    onPressed: () => Get.to(CategoryListView()),
                   ),
                   SizedBox(height: 10),
                   GridView.builder(
@@ -167,7 +167,11 @@ class DashboardView extends StatefulWidget {
                     },
                   ),
                   SizedBox(height: 20),
-                  H5(title: "Discount", subtitle: "See all"),
+                  H5(
+                    title: "Discount",
+                    subtitle: "See all",
+                    onPressed: () => Get.to(ProductListView()),
+                  ),
                   SizedBox(height: 10),
                   GridView.builder(
                     padding: EdgeInsets.zero,

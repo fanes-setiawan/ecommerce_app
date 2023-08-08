@@ -1,8 +1,3 @@
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
-
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-Join%20Kelas%20Online-brightgreen.svg?logo=whatsapp&style=social)](https://wa.me/6282146727409?text=Hallo,%20saya%20ingin%20join%20kelas%20Online%20/w%20DenyOcr)
-
-
 # Hyper UI
 Hyper UI adalah kumpulan sampel ReuseableWidget Flutter yang bisa kamu gunakan untuk projectmu.
 Pada dasar-nya, Hyper UI dibuat dengan tujuan untuk edukasi.
