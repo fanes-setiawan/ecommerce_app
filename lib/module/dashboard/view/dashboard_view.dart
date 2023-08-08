@@ -120,7 +120,11 @@ class DashboardView extends StatefulWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  H5(title: "Category", subtitle: "See all"),
+                  H5(
+                    title: "Category",
+                    subtitle: "See all",
+                    onPressed: () => Get.to(ProductListView()),
+                  ),
                   SizedBox(height: 10),
                   GridView.builder(
                     padding: EdgeInsets.zero,

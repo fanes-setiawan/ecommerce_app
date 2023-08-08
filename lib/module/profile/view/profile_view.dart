@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/shared/widget/logo/appLogoSmall.dart';
 import '../controller/profile_controller.dart';
 
 class ProfileView extends StatefulWidget {
@@ -10,8 +11,18 @@ class ProfileView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: AppLogoSmall(),
         title: const Text("Profile"),
-        actions: const [],
+        actions: [
+          IconButton(
+              onPressed: () {
+                controller.doLogOut();
+              },
+              icon: Icon(
+                Icons.logout,
+                size: 24,
+              ))
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(

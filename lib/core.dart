@@ -17,6 +17,8 @@ export 'package:hyper_ui/module/main_navigation/controller/main_navigation_contr
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
 export 'package:hyper_ui/module/order/controller/order_controller.dart';
 export 'package:hyper_ui/module/order/view/order_view.dart';
+export 'package:hyper_ui/module/product_list/controller/product_list_controller.dart';
+export 'package:hyper_ui/module/product_list/view/product_list_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
 export 'package:hyper_ui/setup.dart';
@@ -62,6 +64,8 @@ export 'package:hyper_ui/shared/widget/form/switch/switch.dart';
 export 'package:hyper_ui/shared/widget/form/textfield/text_field.dart';
 export 'package:hyper_ui/shared/widget/form/time_picker/timepicker.dart';
 export 'package:hyper_ui/shared/widget/list/list_view.dart';
+export 'package:hyper_ui/shared/widget/logo/appLogo.dart';
+export 'package:hyper_ui/shared/widget/logo/appLogoSmall.dart';
 export 'package:hyper_ui/shared/widget/typography/heading.dart';
 export 'package:hyper_ui/shared/widget/widget_demo/widget_demo.dart';
 export 'package:hyper_ui/state_util.dart';

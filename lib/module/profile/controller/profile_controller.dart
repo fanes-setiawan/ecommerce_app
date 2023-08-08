@@ -17,4 +17,7 @@ class ProfileController extends State<ProfileView> {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+  doLogOut() {
+    Get.offAll(LoginView());
+  }
 }
