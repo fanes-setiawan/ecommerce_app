@@ -3,8 +3,9 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
-export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
+export 'package:hyper_ui/module/cart/controller/cart_controller.dart';
+export 'package:hyper_ui/module/cart/view/cart_view.dart';
 export 'package:hyper_ui/module/category_list/controller/category_list_controller.dart';
 export 'package:hyper_ui/module/category_list/view/category_list_view.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
@@ -17,8 +18,6 @@ export 'package:hyper_ui/module/login/controller/login_controller.dart';
 export 'package:hyper_ui/module/login/view/login_view.dart';
 export 'package:hyper_ui/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
-export 'package:hyper_ui/module/order/controller/order_controller.dart';
-export 'package:hyper_ui/module/order/view/order_view.dart';
 export 'package:hyper_ui/module/product_details/controller/product_details_controller.dart';
 export 'package:hyper_ui/module/product_details/view/product_details_view.dart';
 export 'package:hyper_ui/module/product_list/controller/product_list_controller.dart';

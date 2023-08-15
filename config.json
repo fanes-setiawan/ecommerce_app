@@ -3,10 +3,12 @@
         "login",
         "product_list",
         "product_details",
-        "category_list"
+        "category_list",
+        "cart"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
+    "learning_mode": false,
     "unfreezed": true,
     "use_cubit": false
 }

@@ -15,7 +15,7 @@ class MainNavigationView extends StatefulWidget {
           index: controller.selectedIndex,
           children: const [
             DashboardView(),
-            OrderView(),
+            CartView(),
             FavoriteView(),
             ProfileView(),
           ],
@@ -38,9 +38,9 @@ class MainNavigationView extends StatefulWidget {
                     color: Colors.white,
                   ),
                 ),
-                child: Icon(MdiIcons.table),
+                child: Icon(MdiIcons.cart),
               ),
-              label: "Order",
+              label: "Cart",
             ),
             BottomNavigationBarItem(
               icon: Badge(
