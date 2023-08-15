@@ -4,7 +4,8 @@
         "product_list",
         "product_details",
         "category_list",
-        "cart"
+        "cart",
+        "edit_profile"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

@@ -3,6 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:image_picker/image_picker.dart';
 
 class QImagePicker extends StatefulWidget {
@@ -79,38 +80,36 @@ class _QImagePickerState extends State<QImagePicker> {
       'image': MultipartFile.fromBytes(
         File(filePath).readAsBytesSync(),
         filename: "upload.jpg",
-      ),
+      )
     });
-
     var res = await Dio().post(
-      'https://api.imgbb.com/1/upload?key=b55ef3fd02b80ab180f284e479acd7c4',
+      "https://api.imgbb.com/1/upload?key=1018863e0712f31d3014187b02745fb4",
       data: formData,
     );
-
     var data = res.data["data"];
     var url = data["url"];
     widget.onChanged(url);
     return url;
   }
 
-  Future<String> uploadToCloudinary(String filePath) async {
-    String cloudName = "dotz74j1p";
-    String apiKey = "983354314759691";
+   Future<String> uploadToCloudinary(String filePath) async {
+    String cloudName = "dlkwckjvt";
+    String apiKey = "581349388592411";
+    // String apiSecret = "b2ogwmbNvOG6CF3FrQlFOJDvbH4";
 
     final formData = FormData.fromMap({
       'file': MultipartFile.fromBytes(
         File(filePath).readAsBytesSync(),
         filename: "upload.jpg",
       ),
-      'upload_preset': 'yogjjkoh',
+      'upload_preset': 'ozik5iy7',
       'api_key': apiKey,
     });
 
     var res = await Dio().post(
-      'https://api.cloudinary.com/v1_1/$cloudName/image/upload',
+      "https://api.cloudinary.com/v1_1/$cloudName/image/upload",
       data: formData,
     );
-
     String url = res.data["secure_url"];
     return url;
   }
@@ -145,117 +144,78 @@ class _QImagePickerState extends State<QImagePicker> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 4.0),
-      margin: EdgeInsets.only(
-        bottom: 12.0,
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            height: 96.0,
-            width: 96.0,
-            margin: EdgeInsets.only(
-              top: 8.0,
-            ),
-            decoration: BoxDecoration(
-              color: loading ? Colors.blueGrey[900] : null,
-              image: loading
-                  ? null
-                  : DecorationImage(
-                      image: NetworkImage(
-                        imageUrl == null
-                            ? "https://i.ibb.co/S32HNjD/no-image.jpg"
-                            : imageUrl!,
-                      ),
-                      fit: BoxFit.cover,
+   return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4.0),
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: 80.0,
+                  width: 80.0,
+                  decoration: BoxDecoration(
+                    color: loading ? Colors.blueGrey[900] : Colors.white,
+                    image: loading
+                        ? null
+                        : DecorationImage(
+                            image: NetworkImage(
+                              imageUrl == null
+                                  ? 'https://e7.pngegg.com/pngimages/282/256/png-clipart-user-profile-avatar-computer-icons-google-account-black-accounting.png'
+                                  : imageUrl!,
+                            ),
+                            fit: BoxFit.cover),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(50.0),
                     ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(
-                  16.0,
-                ),
-              ),
-            ),
-            child: Visibility(
-              visible: loading == true,
-              child: SizedBox(
-                width: 30,
-                height: 30,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: 20.0,
-                      height: 20.0,
-                      child: CircularProgressIndicator(
-                        color: Colors.orange,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 6.0,
-                    ),
-                    Text(
-                      "Uploading...",
-                      style: TextStyle(
-                        fontSize: 9.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 20.0,
-          ),
-          Expanded(
-            child: FormField(
-                initialValue: false,
-                validator: (value) {
-                  return widget.validator!(imageUrl);
-                },
-                enabled: true,
-                builder: (FormFieldState<bool> field) {
-                  return TextFormField(
-                    controller: controller,
-                    obscureText: widget.obscure,
-                    readOnly: true,
-                    decoration: InputDecoration(
-                      labelText: widget.label,
-                      labelStyle: TextStyle(
-                        color: Colors.blueGrey,
-                      ),
-                      suffixIcon: Transform.scale(
-                        scale: 0.8,
-                        child: SizedBox(
-                          width: 80.0,
-                          child: ElevatedButton(
-                            style: Theme.of(context).elevatedButtonTheme.style,
-                            onPressed: () => browsePhoto(),
-                            child: Text(
-                              "Browse",
-                              style: TextStyle(
-                                fontSize: 12.0,
-                              ),
+                  ),
+                  child: Visibility(
+                    visible: loading == true,
+                    child: SizedBox(
+                      width: 30,
+                      height: 30,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 20.0,
+                            height: 20.0,
+                            child: CircularProgressIndicator(
+                              color: Colors.orange,
                             ),
                           ),
-                        ),
+                          SizedBox(
+                            height: 6.0,
+                          ),
+                          Text(
+                            "Uploading...",
+                            style: TextStyle(
+                              fontSize: 9.0,
+                            ),
+                          ),
+                        ],
                       ),
-                      helperText: widget.helper,
-                      hintText: widget.hint,
-                      errorText: field.errorText,
                     ),
-                    onChanged: (value) {
-                      widget.onChanged(value);
-                    },
-                  );
-                }),
-          ),
-        ],
-      ),
-    );
+                  ),
+                ),
+                Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child:  CircleAvatar(
+                    radius: 15,
+                    backgroundColor: loading ? Colors.grey : primaryColor,
+                    child: IconButton(
+                          onPressed: () => browsePhoto(),
+                          icon: Icon(Icons.camera_alt, size: 17, color: Colors.white),
+                      
+                    
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      );
   }
 }

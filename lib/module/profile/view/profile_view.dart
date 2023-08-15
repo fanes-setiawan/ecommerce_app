@@ -14,6 +14,13 @@ class ProfileView extends StatefulWidget {
         leading: AppLogoSmall(),
         title: const Text("Profile"),
         actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: const Icon(
+            Icons.more_horiz,
+            size: 24.0,
+            ),
+          ),
         ],
       ),
       body: Container(
@@ -42,13 +49,14 @@ class ProfileView extends StatefulWidget {
               ),
             ),
             ListTile(
+              onTap: ()=>Get.to(EditProfileView()),
               minLeadingWidth: 0.0,
               title: Text("Edit Profil"),
               trailing: Icon(
                 Icons.chevron_right,
                 size: 24.0,
-                ),
               ),
+            ),
             Divider(),
             ListTile(
               minLeadingWidth: 0.0,
@@ -56,8 +64,8 @@ class ProfileView extends StatefulWidget {
               trailing: Icon(
                 Icons.chevron_right,
                 size: 24.0,
-                ),
               ),
+            ),
             Divider(),
             ListTile(
               minLeadingWidth: 0.0,
@@ -65,8 +73,8 @@ class ProfileView extends StatefulWidget {
               trailing: Icon(
                 Icons.chevron_right,
                 size: 24.0,
-                ),
               ),
+            ),
             Divider(),
             ListTile(
               minLeadingWidth: 0.0,
@@ -74,21 +82,24 @@ class ProfileView extends StatefulWidget {
               trailing: Icon(
                 Icons.chevron_right,
                 size: 24.0,
-                ),
               ),
+            ),
             Divider(),
             ListTile(
               minLeadingWidth: 0.0,
-              onTap: ()=>controller.doLogOut(),
-              title: Text("Logout",style: TextStyle(
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
-              ),),
+              onTap: () => controller.doLogOut(),
+              title: Text(
+                "Logout",
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               trailing: Icon(
                 Icons.chevron_right,
                 size: 24.0,
-                ),
               ),
+            ),
             Divider(),
           ],
         ),

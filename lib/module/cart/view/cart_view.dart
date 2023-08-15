@@ -37,7 +37,7 @@ class CartView extends StatefulWidget {
                         Container(
                           width: 96.0,
                           height: 96.0,
-                          decoration:  BoxDecoration(
+                          decoration: BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage(
                                 item["photo"],
@@ -64,7 +64,7 @@ class CartView extends StatefulWidget {
                                 ),
                               ),
                               Text(
-                              item["category"],
+                                item["category"],
                                 style: TextStyle(
                                   fontSize: 14.0,
                                 ),
@@ -72,7 +72,7 @@ class CartView extends StatefulWidget {
                               Row(
                                 children: [
                                   Text(
-                                  "\$${item["price"]}",
+                                    "\$${item["price"]}",
                                     style: TextStyle(
                                       fontSize: 17.0,
                                       fontWeight: FontWeight.bold,
@@ -154,141 +154,152 @@ class CartView extends StatefulWidget {
             child: Column(
               children: [
                 Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 12.0 , vertical: 10),
-              child: Row(
-              children: [
-               Container(
-                  width: 100,
-                  child: Text("Subtotal",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  ),
-                  ),
-                ),
-                Expanded(
-                  child: Text("\$570",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  ),
-                  ),
-                ),Container(
-                  width: 100,
-                  child: Text("3 Items",
-                  style: TextStyle(
-                  fontSize: 10.0,
-                  ),
-                  ),
-                ),
-                
-                Container(
-                  width: 24,
-                ),
-                 ],
-                 ),
-               ),
-               SizedBox(height: 10),
-               Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-              children: [
-               Container(
-                  width: 100,
-                  child: Text("Shipping",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 10),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "Subtotal",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          "\$570",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "3 Items",
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 24,
+                      ),
+                    ],
                   ),
                 ),
-                Expanded(
-                  child: Text("JNE Expres",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  ),
-                  ),
-                ),Container(
-                  width: 100,
-                  child: Text("7-8 day",
-                  style: TextStyle(
-                  fontSize: 10.0,
-                  ),
-                  ),
-                ),
-                const Icon(
-                Icons.chevron_right,
-                size: 24.0,
-                ),
-              ],
-              ),
-            ),
-              SizedBox(height: 10),
-               Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-              children: [
-               Container(
-                  width: 100,
-                  child: Text("Voucher",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  ),
-                  ),
-                ),
-                Expanded(
-                  child: Text("paypay",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  ),
-                  ),
-                ),Container(
-                  width: 100,
-                  child: Text("20% off",
-                  style: TextStyle(
-                  fontSize: 10.0,
-                  ),
+                SizedBox(height: 10),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "Shipping",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          "JNE Expres",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "7-8 day",
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ),
+                      const Icon(
+                        Icons.chevron_right,
+                        size: 24.0,
+                      ),
+                    ],
                   ),
                 ),
-                const Icon(
-                Icons.chevron_right,
-                size: 24.0,
+                SizedBox(height: 10),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "Voucher",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          "paypay",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "20% off",
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ),
+                      const Icon(
+                        Icons.chevron_right,
+                        size: 24.0,
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-              ),
-            ),
-              SizedBox(height: 10),
-               Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-              children: [
-               Container(
-                  width: 100,
-                  child: Text("Total",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  ),
+                SizedBox(height: 10),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "Total",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 100,
+                        child: Text(
+                          "\$40",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Spacer(),
+                      Container(
+                        width: 24,
+                      )
+                    ],
                   ),
                 ),
-                Container(
-                  width: 100,
-                  child: Text("\$40",
-                  style: TextStyle(
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.bold,
-                  ),
-                  ),
-                ),
-                Spacer(),
-                
-                Container(
-                  width: 24,
-                )
-              ],
-              ),
-            ),
               ],
             ),
           ),
-        
-          QActionButton(label: "Payment", onPressed: (){}),
+          QActionButton(label: "Payment", onPressed: () {}),
         ],
       ),
     );
