@@ -14,22 +14,83 @@ class ProfileView extends StatefulWidget {
         leading: AppLogoSmall(),
         title: const Text("Profile"),
         actions: [
-          IconButton(
-              onPressed: () {
-                controller.doLogOut();
-              },
-              icon: Icon(
-                Icons.logout,
-                size: 24,
-              ))
         ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 36.0,
+              backgroundImage: NetworkImage(
+                "https://i.ibb.co/PGv8ZzG/me.jpg",
+              ),
+            ),
+            Text(
+              "Fanes Setiawan",
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 5),
+            Text(
+              "fanes@gmail.com",
+              style: TextStyle(
+                fontSize: 12.0,
+              ),
+            ),
+            ListTile(
+              minLeadingWidth: 0.0,
+              title: Text("Edit Profil"),
+              trailing: Icon(
+                Icons.chevron_right,
+                size: 24.0,
+                ),
+              ),
+            Divider(),
+            ListTile(
+              minLeadingWidth: 0.0,
+              title: Text("Change Password"),
+              trailing: Icon(
+                Icons.chevron_right,
+                size: 24.0,
+                ),
+              ),
+            Divider(),
+            ListTile(
+              minLeadingWidth: 0.0,
+              title: Text("Privacy Policy"),
+              trailing: Icon(
+                Icons.chevron_right,
+                size: 24.0,
+                ),
+              ),
+            Divider(),
+            ListTile(
+              minLeadingWidth: 0.0,
+              title: Text("herm of Service"),
+              trailing: Icon(
+                Icons.chevron_right,
+                size: 24.0,
+                ),
+              ),
+            Divider(),
+            ListTile(
+              minLeadingWidth: 0.0,
+              onTap: ()=>controller.doLogOut(),
+              title: Text("Logout",style: TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+              ),),
+              trailing: Icon(
+                Icons.chevron_right,
+                size: 24.0,
+                ),
+              ),
+            Divider(),
+          ],
         ),
       ),
     );

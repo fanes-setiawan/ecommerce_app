@@ -20,4 +20,5 @@ class ProfileController extends State<ProfileView> {
   doLogOut() {
     Get.offAll(LoginView());
   }
+  
 }

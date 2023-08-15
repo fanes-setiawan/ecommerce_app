@@ -4,7 +4,7 @@ import 'package:hyper_ui/core.dart';
 ThemeData getDarkTheme() {
   return ThemeData.dark().copyWith(
     appBarTheme: AppBarTheme(
-      elevation: 0.6,
+      elevation: 0.0,
       titleTextStyle: GoogleFonts.lato(
         color: Colors.white,
         fontWeight: FontWeight.bold,

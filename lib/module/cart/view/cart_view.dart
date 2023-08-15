@@ -154,7 +154,7 @@ class CartView extends StatefulWidget {
             child: Column(
               children: [
                 Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 12.0),
+              padding:  EdgeInsets.symmetric(horizontal: 12.0 , vertical: 10),
               child: Row(
               children: [
                Container(
