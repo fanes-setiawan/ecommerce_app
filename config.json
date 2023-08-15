@@ -5,7 +5,8 @@
         "product_details",
         "category_list",
         "cart",
-        "edit_profile"
+        "edit_profile",
+        "change_password"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

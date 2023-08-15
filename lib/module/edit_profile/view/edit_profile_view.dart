@@ -10,7 +10,8 @@ class EditProfileView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("EditProfile"),
+        centerTitle: true,
+        title: const Text("Edit Profile"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -18,36 +19,43 @@ class EditProfileView extends StatefulWidget {
           width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children:  [
-              QImagePicker(label: "Photo", onChanged: (value){},validator: Validator.required,value: null,),
+            children: [
+              QImagePicker(
+                label: "Photo",
+                onChanged: (value) {},
+                validator: Validator.required,
+                value: null,
+              ),
               SizedBox(height: 15.0),
               H6(title: "Personal Information"),
               QTextField(
-              label: "Full name",
-              validator: Validator.required,
-              onChanged: (value) {},
+                label: "Full name",
+                validator: Validator.required,
+                onChanged: (value) {},
               ),
               QTextField(
-              label: "Last Name",
-              validator: Validator.required,
-              onChanged: (value) {},
+                label: "Last Name",
+                validator: Validator.required,
+                onChanged: (value) {},
               ),
               QTextField(
-              label: "Date of Birth",
-              validator: Validator.required,
-              onChanged: (value) {},
+                label: "Date of Birth",
+                validator: Validator.required,
+                onChanged: (value) {},
               ),
-               QTextField(
-              label: "Email",
-              validator: Validator.required,
-              onChanged: (value) {},
+              QTextField(
+                label: "Email",
+                validator: Validator.required,
+                onChanged: (value) {},
               ),
-
             ],
           ),
         ),
       ),
-      bottomNavigationBar: QActionButton(label: "Save", onPressed: (){},),
+      bottomNavigationBar: QActionButton(
+        label: "Save",
+        onPressed: () {},
+      ),
     );
   }
 

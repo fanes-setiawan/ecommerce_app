@@ -92,7 +92,7 @@ class _QImagePickerState extends State<QImagePicker> {
     return url;
   }
 
-   Future<String> uploadToCloudinary(String filePath) async {
+  Future<String> uploadToCloudinary(String filePath) async {
     String cloudName = "dlkwckjvt";
     String apiKey = "581349388592411";
     // String apiSecret = "b2ogwmbNvOG6CF3FrQlFOJDvbH4";
@@ -144,78 +144,76 @@ class _QImagePickerState extends State<QImagePicker> {
 
   @override
   Widget build(BuildContext context) {
-   return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4.0),
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Container(
-                  height: 80.0,
-                  width: 80.0,
-                  decoration: BoxDecoration(
-                    color: loading ? Colors.blueGrey[900] : Colors.white,
-                    image: loading
-                        ? null
-                        : DecorationImage(
-                            image: NetworkImage(
-                              imageUrl == null
-                                  ? 'https://e7.pngegg.com/pngimages/282/256/png-clipart-user-profile-avatar-computer-icons-google-account-black-accounting.png'
-                                  : imageUrl!,
-                            ),
-                            fit: BoxFit.cover),
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(50.0),
-                    ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      child: Column(
+        children: [
+          Stack(
+            children: [
+              Container(
+                height: 80.0,
+                width: 80.0,
+                decoration: BoxDecoration(
+                  color: loading ? Colors.blueGrey[900] : Colors.white,
+                  image: loading
+                      ? null
+                      : DecorationImage(
+                          image: NetworkImage(
+                            imageUrl == null
+                                ? 'https://e7.pngegg.com/pngimages/282/256/png-clipart-user-profile-avatar-computer-icons-google-account-black-accounting.png'
+                                : imageUrl!,
+                          ),
+                          fit: BoxFit.cover),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(50.0),
                   ),
-                  child: Visibility(
-                    visible: loading == true,
-                    child: SizedBox(
-                      width: 30,
-                      height: 30,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 20.0,
-                            height: 20.0,
-                            child: CircularProgressIndicator(
-                              color: Colors.orange,
-                            ),
+                ),
+                child: Visibility(
+                  visible: loading == true,
+                  child: SizedBox(
+                    width: 30,
+                    height: 30,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 20.0,
+                          height: 20.0,
+                          child: CircularProgressIndicator(
+                            color: Colors.orange,
                           ),
-                          SizedBox(
-                            height: 6.0,
+                        ),
+                        SizedBox(
+                          height: 6.0,
+                        ),
+                        Text(
+                          "Uploading...",
+                          style: TextStyle(
+                            fontSize: 9.0,
                           ),
-                          Text(
-                            "Uploading...",
-                            style: TextStyle(
-                              fontSize: 9.0,
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  child:  CircleAvatar(
-                    radius: 15,
-                    backgroundColor: loading ? Colors.grey : primaryColor,
-                    child: IconButton(
-                          onPressed: () => browsePhoto(),
-                          icon: Icon(Icons.camera_alt, size: 17, color: Colors.white),
-                      
-                    
-                    ),
+              ),
+              Positioned(
+                right: 0,
+                bottom: 0,
+                child: CircleAvatar(
+                  radius: 15,
+                  backgroundColor: loading ? Colors.grey : primaryColor,
+                  child: IconButton(
+                    onPressed: () => browsePhoto(),
+                    icon: Icon(Icons.camera_alt, size: 17, color: Colors.white),
                   ),
-                )
-              ],
-            ),
-          ],
-        ),
-      );
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }

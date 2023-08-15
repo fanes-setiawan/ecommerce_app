@@ -8,6 +8,8 @@ export 'package:hyper_ui/module/cart/controller/cart_controller.dart';
 export 'package:hyper_ui/module/cart/view/cart_view.dart';
 export 'package:hyper_ui/module/category_list/controller/category_list_controller.dart';
 export 'package:hyper_ui/module/category_list/view/category_list_view.dart';
+export 'package:hyper_ui/module/change_password/controller/change_password_controller.dart';
+export 'package:hyper_ui/module/change_password/view/change_password_view.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
 export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
 export 'package:hyper_ui/module/debug/controller/debug_controller.dart';

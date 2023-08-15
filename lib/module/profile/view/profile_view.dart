@@ -59,6 +59,7 @@ class ProfileView extends StatefulWidget {
             ),
             Divider(),
             ListTile(
+              onTap: ()=> Get.to(ChangePasswordView()),
               minLeadingWidth: 0.0,
               title: Text("Change Password"),
               trailing: Icon(
