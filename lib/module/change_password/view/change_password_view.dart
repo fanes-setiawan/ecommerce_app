@@ -18,30 +18,33 @@ class ChangePasswordView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children:  [
+            children: [
               QTextField(
-              label: "Old Password",
-              validator: Validator.required,
-              suffixIcon: Icons.password_outlined,
-              onChanged: (value) {},
+                label: "Old Password",
+                validator: Validator.required,
+                suffixIcon: Icons.password_outlined,
+                onChanged: (value) {},
               ),
-               QTextField(
-              label: "New Password",
-              validator: Validator.required,
-               suffixIcon: Icons.password_outlined,
-              onChanged: (value) {},
+              QTextField(
+                label: "New Password",
+                validator: Validator.required,
+                suffixIcon: Icons.password_outlined,
+                onChanged: (value) {},
               ),
-               QTextField(
-              label: "Confirm new password",
-              validator: Validator.required,
-               suffixIcon: Icons.password_outlined,
-              onChanged: (value) {},
+              QTextField(
+                label: "Confirm new password",
+                validator: Validator.required,
+                suffixIcon: Icons.password_outlined,
+                onChanged: (value) {},
               ),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: QActionButton(label: "Save", onPressed: (){},),
+      bottomNavigationBar: QActionButton(
+        label: "Save",
+        onPressed: () {},
+      ),
     );
   }
 

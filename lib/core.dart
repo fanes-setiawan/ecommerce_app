@@ -16,6 +16,8 @@ export 'package:hyper_ui/module/debug/controller/debug_controller.dart';
 export 'package:hyper_ui/module/debug/view/debug_view.dart';
 export 'package:hyper_ui/module/edit_profile/controller/edit_profile_controller.dart';
 export 'package:hyper_ui/module/edit_profile/view/edit_profile_view.dart';
+export 'package:hyper_ui/module/faq/controller/faq_controller.dart';
+export 'package:hyper_ui/module/faq/view/faq_view.dart';
 export 'package:hyper_ui/module/favorite/controller/favorite_controller.dart';
 export 'package:hyper_ui/module/favorite/view/favorite_view.dart';
 export 'package:hyper_ui/module/login/controller/login_controller.dart';

@@ -6,7 +6,8 @@
         "category_list",
         "cart",
         "edit_profile",
-        "change_password"
+        "change_password",
+        "faq"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

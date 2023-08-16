@@ -1,6 +1,7 @@
 import 'package:hyper_ui/core.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -24,11 +25,11 @@ class MainApp extends StatelessWidget {
       theme: getDefaultTheme(),
       // home: MainNavigationView(),
       home: LoginView(),
-      builder: (context, child) => DebugView(
-        context: context,
-        child: child,
-        visible: true,
-      ),
+      // builder: (context, child) => DebugView(
+      //   context: context,
+      //   child: child,
+      //   visible: true,
+      // ),
     );
   }
 }
