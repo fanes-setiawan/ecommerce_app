@@ -10,14 +10,15 @@ class FaqView extends StatefulWidget {
     controller.view = this;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Faq"),
-        actions: const [],
-      ),
-      body: InAppWebView(
-        initialUrlRequest: URLRequest(url: Uri.parse("https://dictionary.cambridge.org/dictionary/english/faq")),
-      )
-    );
+        appBar: AppBar(
+          title: const Text("Faq"),
+          actions: const [],
+        ),
+        body: InAppWebView(
+          initialUrlRequest: URLRequest(
+              url: Uri.parse(
+                  "https://dictionary.cambridge.org/dictionary/english/faq")),
+        ));
   }
 
   @override

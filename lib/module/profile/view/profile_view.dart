@@ -80,6 +80,7 @@ class ProfileView extends StatefulWidget {
               ),
               Divider(),
               ListTile(
+                onTap: ()=> Get.to(PrivacyPolicyView()),
                 minLeadingWidth: 0.0,
                 title: Text("Privacy Policy"),
                 trailing: Icon(
