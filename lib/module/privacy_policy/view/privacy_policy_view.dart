@@ -10,15 +10,14 @@ class PrivacyPolicyView extends StatefulWidget {
     controller.view = this;
 
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("Privacy Policy"),
-        actions: const [],
-      ),
-      body: InAppWebView(
-        initialUrlRequest: URLRequest(url: Uri.parse("https://example.com")),
-      )
-    );
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text("Privacy Policy"),
+          actions: const [],
+        ),
+        body: InAppWebView(
+          initialUrlRequest: URLRequest(url: Uri.parse("https://example.com")),
+        ));
   }
 
   @override

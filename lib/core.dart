@@ -32,6 +32,8 @@ export 'package:hyper_ui/module/product_list/controller/product_list_controller.
 export 'package:hyper_ui/module/product_list/view/product_list_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
+export 'package:hyper_ui/module/tos/controller/tos_controller.dart';
+export 'package:hyper_ui/module/tos/view/tos_view.dart';
 export 'package:hyper_ui/setup.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
 export 'package:hyper_ui/shared/theme/theme_config.dart';

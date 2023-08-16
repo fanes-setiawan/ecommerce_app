@@ -80,7 +80,7 @@ class ProfileView extends StatefulWidget {
               ),
               Divider(),
               ListTile(
-                onTap: ()=> Get.to(PrivacyPolicyView()),
+                onTap: () => Get.to(PrivacyPolicyView()),
                 minLeadingWidth: 0.0,
                 title: Text("Privacy Policy"),
                 trailing: Icon(
@@ -90,8 +90,9 @@ class ProfileView extends StatefulWidget {
               ),
               Divider(),
               ListTile(
+                onTap: ()=> Get.to(TosView()),
                 minLeadingWidth: 0.0,
-                title: Text("herm of Service"),
+                title: Text("Term of Service"),
                 trailing: Icon(
                   Icons.chevron_right,
                   size: 24.0,

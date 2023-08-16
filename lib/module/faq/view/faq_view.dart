@@ -11,6 +11,7 @@ class FaqView extends StatefulWidget {
 
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text("Faq"),
           actions: const [],
         ),
